@@ -124,37 +124,87 @@ const links = [
   },
 ];
 
+const bestIndoorPlants = [
+  {
+    text: "String of Hearts",
+    url: "https://en.wikipedia.org/wiki/Ceropegia",
+    description:
+      "Ceropegia is a genus of plants within the family Apocynaceae, native to Africa, southern Asia, and Australia.[1][2] It was named by Carl Linnaeus, who first described this genus in his Genera plantarum, which appeared in 1737.",
+  },
+  {
+    text: "Snake Plant",
+    url: "https://en.wikipedia.org/wiki/Dracaena_trifasciata",
+    description:
+      "Dracaena trifasciata is a species of flowering plant in the family Asparagaceae, native to tropical West Africa from Nigeria east to the Congo. It is most commonly known as the snake plant, Saint George's sword, mother-in-law's tongue, and viper's bowstring hemp, among other names.",
+  },
+  {
+    text: "Peace Lily",
+    url: "https://en.wikipedia.org/wiki/Spathiphyllum",
+    description:
+      "Spathiphyllum is a genus of about 47 species of monocotyledonous flowering plants in the family Araceae, native to tropical regions of the Americas and southeastern Asia. Certain species of Spathiphyllum are commonly known as spath or peace lilies.",
+  },
+  {
+    text: "Monstera or Swiss Cheeese",
+    url: "https://en.wikipedia.org/wiki/Monstera_deliciosa",
+    description:
+      "Monstera deliciosa, the Swiss cheese plant or split-leaf philodendron is a species of flowering plant native to tropical forests of southern Mexico, south to Panama. It has been introduced to many tropical areas, and has become a mildly invasive species in Hawaii, Seychelles, Ascension Island and the Society Islands.",
+  },
+  {
+    text: "ZZ plant or Zanzibar",
+    url: "https://en.wikipedia.org/wiki/Zamioculcas",
+    description:
+      "Zamioculcas is a genus of flowering plants in the family Araceae, containing the single species Zamioculcas zamiifolia. It is a tropical perennial plant, native to eastern Africa, from southern Kenya to northeastern South Africa",
+  },
+  {
+    text: "Philodendron",
+    url: "https://en.wikipedia.org/wiki/Philodendron",
+    description:
+      "Philodendron is a large genus of flowering plants in the family Araceae. As of September 2015, the World Checklist of Selected Plant Families accepted 489 species; other sources accept different numbers.",
+  },
+  {
+    text: "Succulents",
+    url: "https://en.wikipedia.org/wiki/Succulent_plant",
+    description:
+      'In botany, succulent plants, also known as succulents, are plants with parts that are thickened, fleshy, and engorged, usually to retain water in arid climates or soil conditions. The word succulent comes from the Latin word sucus, meaning "juice" or "sap".',
+  },
+  {
+    text: "Pothos",
+    url: "https://en.wikipedia.org/wiki/Epipremnum_aureum",
+    description:
+      "Epipremnum aureum is a species in the arum family Araceae, native to Mo'orea in the Society Islands of French Polynesia. The species is a popular houseplant in temperate regions but has also become naturalised in tropical and sub-tropical forests worldwide, including northern South Africa,[3] Australia, Southeast Asia, South Asia, the Pacific Islands and the West Indies, where it has caused severe ecological damage in some cases.",
+  },
+  {
+    text: "Peacock Plant or Calathea",
+    url: "https://en.wikipedia.org/wiki/Calathea",
+    description:
+      "Calathea is a genus of flowering plants belonging to the family Marantaceae. They are commonly called calatheas or (like their relatives) prayer plants. About 200 species formerly assigned to Calathea are now in the genus Goeppertia.",
+  },
+  {
+    text: "Bromeliad(tropical plants)",
+    url: "https://en.wikipedia.org/wiki/Bromeliaceae",
+    description:
+      "The Bromeliaceae (the bromeliads) are a family of monocot flowering plants of about 80 genera and 3700 known species, native mainly to the tropical Americas, with several species found in the American subtropics and one in tropical west Africa, Pitcairnia feliciana.",
+  },
+];
+
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
-        Congratulations Martha!
-        <br />
-        This is your site greenethumbs.com 🌻
-        <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
+        <span style={headingAccentStyles}>The Greene Thumb</span>
       </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
+      <h2 style={headingStyles}>
+        <span style={headingAccentStyles}>10 Best indoors Plants</span>
+      </h2>
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map((link) => (
+        {bestIndoorPlants.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
                 href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.text}
               </a>
